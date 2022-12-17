@@ -1,0 +1,64 @@
+<m-body>
+    <nav-mobile json="template([
+      {
+        text: 'Apel Hunian',
+        backgroundColor: 'slate-50',
+        textColor: 'slate-800',
+        backButton: 'true'
+      }
+    ])">
+    </nav-mobile>
+    <div id="bg-result" class="relative p-5 mt-2">
+      <div>
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok A</label>
+        <input type="text" id="bloka" onchange="checkapel()"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok A">
+      </div>
+      <br>
+      <div>
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok B</label>
+        <input type="text" id="blokb" onchange="checkapel()"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok B">
+      </div>
+      <br>
+      <div>
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok C</label>
+        <input type="text" id="blokc" onchange="checkapel()"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok C">
+      </div>
+      <br>
+      <div>
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok D</label>
+        <input type="text" id="blokd" onchange="checkapel()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok D">
+      </div>
+      <br>
+      <div>
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok E</label>
+        <input type="text" id="bloke" onchange="checkapel()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok E">
+      </div>
+      <br>
+      <div>
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok F</label>
+        <input type="text" id="blokf" onchange="checkapel()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok F">
+      </div>
+      <br>
+      <div>
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok G</label>
+        <input type="text" id="blokg" onchange="checkapel()"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok G">
+      </div>
+      <br>
+      <div>
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok H</label>
+        <input type="text" id="blokh" onchange="checkapel()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok H">
+      </div>
+      <br>
+      <div>
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok I</label>
+        <input type="text" id="bloki" onchange="checkapel()"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok I">
+      </div>
+      <br>
+      <div>
+        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok J</label>
+        <input type="text" id="blokj" onchange="checkapel()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok J">
+      </div>
+      <br>
+      <button id="submitapel" onclick="laporapel()" class="w-full mt-4 bg-blue-600 hover:bg-blue-700 shadow-xl text-white font-bold py-2 px-4 rounded disabled:bg-blue-400" disabled="true"> Buat Laporan </button>
+    </div>
+  </m-body>

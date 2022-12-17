@@ -1,0 +1,16 @@
+<m-body>
+    <nav-mobile json="template([
+      {
+        text: 'Permintaan Akses',
+        backgroundColor: 'slate-50',
+        textColor: 'slate-800',
+        backButton: 'true'
+      }
+    ])">
+    </nav-mobile>
+    <div>
+          <section class="p-5">
+            <h3>Harap izinkan akses kamera anda.</h3><br>
+           <img src="{{imgPath}}/izin-akses.jpg">
+          </section>
+  </m-body>

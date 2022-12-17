@@ -1,0 +1,57 @@
+<m-body>
+    <nav-mobile json="template([
+        {
+          text: 'Laporan Apel Hunian',
+          backgroundColor: 'slate-50',
+          textColor: 'slate-800',
+          backButton: 'true'
+        }
+      ])"></nav-mobile>
+    <div>
+      <section class="p-5">
+        <div json="getLaporanapel()" function="fetchLaporanapel()" class="w-full">
+        <forEach="laporan in dataApel.list_laporan" :key="laporan._id">
+          <div class="shadow overflow-hidden rounded border-b border-gray-200 mb-4">
+            <table><thead class="bg-blue-500 text-white text-xs rounded-lg">
+              <tr>
+                <th style="width:21%" class="text-left py-3 px-4 uppercase font-semibold text-xs" return="laporan.author"></th>
+                <th style="width:36%" class="text-left py-3 px-4 uppercase font-semibold text-xs" return="laporan.tanggal"></th>
+                <th style="width:30%" class="text-left py-3 px-4 uppercase font-semibold text-xs" return="'Total : ' + laporan.jumlah">Jumlah: 0</th>
+              </tr>
+            </thead></table>
+            <div class="overflow-x-auto">
+            <table class="min-w-full bg-white ">
+              <thead class="bg-slate-200 text-black rounded-lg">
+                  <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">A</th>
+                  <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">B</th>
+                  <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">C</th>
+                  <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">D</th>
+                  <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">E</th>
+                  <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">F</th>
+                  <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">G</th>
+                  <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">H</th>
+                  <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">I</th>
+                  <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">J</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-700">
+                  <tr>
+                    <td return="laporan.bloka" class="w-1/3 text-left py-3 px-4"></td>
+                    <td return="laporan.blokb" class="w-1/3 text-left py-3 px-4"></td>
+                    <td return="laporan.blokc" class="w-1/3 text-left py-3 px-4"></td>
+                    <td return="laporan.blokd" class="w-1/3 text-left py-3 px-4"></td>
+                    <td return="laporan.bloke" class="w-1/3 text-left py-3 px-4"></td>
+                    <td return="laporan.blokf" class="w-1/3 text-left py-3 px-4"></td>
+                    <td return="laporan.blokg" class="w-1/3 text-left py-3 px-4"></td>
+                    <td return="laporan.blokh" class="w-1/3 text-left py-3 px-4"></td>
+                    <td return="laporan.bloki" class="w-1/3 text-left py-3 px-4"></td>
+                    <td return="laporan.blokj" class="w-1/3 text-left py-3 px-4"></td>
+                  </tr>
+              </tbody>
+            </table>
+            </div>
+          </div>
+        </forEach>
+        </div>
+      </section>
+  </m-body>
