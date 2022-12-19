@@ -10,72 +10,26 @@
     </nav-mobile>
     <div>
           <section class="p-5">
-            <div class="md:px-32 w-full">
+            <div class="w-full">
                 <div class="shadow overflow-hidden rounded border-b border-gray-200">
                   <table class="min-w-full bg-white">
                     <thead class="bg-slate-200 text-black rounded-lg">
                       <tr>
-                        <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Blok</th>
-                        <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">PAGI</th>
+                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Blok</th>
+                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">PAGI</th>
                         <th class="text-left py-3 px-4 uppercase font-semibold text-sm">SIANG</th>
                         <th class="text-left py-3 px-4 uppercase font-semibold text-sm">MALAM</td>
                       </tr>
                     </thead>
-                  <tbody class="text-gray-700">
-                    <tr>
-                      <td class="w-1/3 text-left py-3 px-4">A</td>
-                      <td class="w-1/3 text-left py-3 px-4">08.00</td>
-                      <td class="text-left py-3 px-4"><a class="hover:text-blue-500">14.00</a></td>
-                      <td class="text-left py-3 px-4"><a class="hover:text-blue-500">20.00</a></td>
-                    </tr>
-                    <tr>
-                        <td class="w-1/3 text-left py-3 px-4">B</td>
-                        <td class="w-1/3 text-left py-3 px-4">08.00</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">14.00</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">20.00</a></td>
-                    </tr>
-                    <tr>
-                        <td class="w-1/3 text-left py-3 px-4">C</td>
-                        <td class="w-1/3 text-left py-3 px-4">08.00</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">14.00</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">20.00</a></td>
-                    </tr>
+                  <tbody json="getJadwal()" function="fetchJadwal()" class="text-gray-700">
+                    <forEach="jadwal in dataJadwal.jadwal" :key="jadwal._id">
                       <tr>
-                        <td class="w-1/3 text-left py-3 px-4">D</td>
-                        <td class="w-1/3 text-left py-3 px-4">09.00</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">15.00</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">21.00</a></td>
-                    </tr>
-                    <tr>
-                        <td class="w-1/3 text-left py-3 px-4">E</td>
-                        <td class="w-1/3 text-left py-3 px-4">09.00</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">15.00</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">21.00</a></td>
-                    </tr>
-                    <tr>
-                        <td class="w-1/3 text-left py-3 px-4">F</td>
-                        <td class="w-1/3 text-left py-3 px-4">09.00</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">15.00</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">21.00</a></td>
-                    </tr>
-                    <tr>
-                        <td class="w-1/3 text-left py-3 px-4">G</td>
-                        <td class="w-1/3 text-left py-3 px-4">10.00</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">16.00</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">22.00</a></td>
-                    </tr>
-                    <tr>
-                        <td class="w-1/3 text-left py-3 px-4">H</td>
-                        <td class="w-1/3 text-left py-3 px-4">10.00</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">16.00</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">22.00</a></td>
-                    </tr>
-                    <tr>
-                        <td class="w-1/3 text-left py-3 px-4">I</td>
-                        <td class="w-1/3 text-left py-3 px-4">10.00</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">16.00</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500">22.00</a></td>
-                    </tr>
+                        <td class="text-left py-3 px-4" return="jadwal.blok"></td>
+                        <td class="text-left py-3 px-4" return="jadwal.pagi"></td>
+                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" return="jadwal.siang"></a></td>
+                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" return="jadwal.malam"></a></td>
+                      </tr>
+                    </forEach>
                   </tbody>
                   </table>
                 </div>

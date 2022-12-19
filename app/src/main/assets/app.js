@@ -13,7 +13,7 @@ if (storage.get('nama') == null) {
     }
 }
 
-if (storage.get('type') == 'kplp') {
+if (storage.get('type') == 'kplp' || storage.get('type') == 'kalapas') {
     route('/home', 'kplp.mellow');
 } else {
     route('/home', 'home.mellow');
@@ -195,6 +195,19 @@ function checkapel() {
     } else {
         document.getElementById('submitapel').disabled = false;
     }
+}
+
+function getJadwal() {
+    return {
+        dataJadwal: null,
+        fetchJadwal() {
+            fetch(API_URL + `/jadwal`)
+                .then((res) => res.json())
+                .then((data) => {
+                    this.dataJadwal = data;
+                });
+        },
+    };
 }
 
 const FPS = 30;
