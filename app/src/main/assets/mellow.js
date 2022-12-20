@@ -112,6 +112,14 @@ class App {
     constructor() {
         this.route = location.hash.slice(1);
     }
+    
+    element(id) {
+        if(id.charAt(0) == '#') {
+            return document.getElementById(id.replace('#',""));
+        }else if(id.charAt(0) == '.') {
+            return document.getElementsByClassName(id.replace('.',""));
+        }
+    }
 
     redirect(url) {
         location.href = '#' + url;

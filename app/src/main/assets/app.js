@@ -1,6 +1,6 @@
-let app = new App();
-let http = new Http();
-let storage = new Storage();
+var app = new App();
+var http = new Http();
+var storage = new Storage();
 var API_URL = '';
 
 if (storage.get('nama') == null) {
@@ -30,9 +30,8 @@ route('/lapor', 'lapor.mellow');
 route('/jadwal-kontrol', 'jadwal-kontrol.mellow');
 
 const Mellow = function() {
-    let app = new App();
-    let http = new Http();
-    let storage = new Storage();
+    var app = new App();
+    var storage = new Storage();
 
     app.setTitle('E-Trolling');
     if (app.route == '/lapor') {
@@ -79,10 +78,10 @@ const Mellow = function() {
 
 
 function login() {
-    fetch(API_URL + '/login/' + document.getElementById('username').value)
+    fetch(API_URL + '/login/' + app.element('#username').value)
         .then((res) => res.json())
         .then((data) => {
-            if (data.username == document.getElementById('username').value && data.password == document.getElementById('password').value) {
+            if (data.username == app.element('#username').value && data.password == app.element('#password').value) {
                 storage.add('nama', data.name);
                 storage.add('username', data.username);
                 storage.add('jabatan', data.jabatan);
@@ -93,7 +92,7 @@ function login() {
                     app.redirect('/home');
                 }
             } else {
-                document.getElementById('incorrect').style.display = 'block';
+                app.element('#incorrect').style.display = 'block';
             }
         });
 }
@@ -104,12 +103,12 @@ function logout() {
 }
 
 function buatLaporan() {
-    http.post(API_URL + '/lapor', 'blok=' + document.getElementById('blok').value + '&tanggal=' + document.getElementById('tanggal').value + '&username=' + storage.get('username') + '&keterangan=' + document.getElementById('keterangan').value + '&author=' + storage.get('nama'));
+    http.post(API_URL + '/lapor', 'blok=' + app.element('#blok').value + '&tanggal=' + app.element('#tanggal').value + '&username=' + storage.get('username') + '&keterangan=' + app.element('#keterangan').value + '&author=' + storage.get('nama'));
     app.redirect('/home');
 }
 
 function laporapel() {
-    http.post(API_URL + '/apel', 'bloka=' + document.getElementById('bloka').value + '&blokb=' + document.getElementById('blokb').value + '&blokc=' + document.getElementById('blokc').value + '&blokd=' + document.getElementById('blokd').value + '&bloke=' + document.getElementById('bloke').value + '&blokf=' + document.getElementById('blokf').value + '&blokg=' + document.getElementById('blokg').value + '&blokh=' + document.getElementById('blokh').value + '&bloki=' + document.getElementById('bloki').value + '&blokj=' + document.getElementById('blokj').value + '&tanggal=' + app.getDatetime('-') + '&username=' + storage.get('username') + '&author=' + storage.get('nama'));
+    http.post(API_URL + '/apel', 'bloka=' + app.element('#bloka').value + '&blokb=' + app.element('#blokb').value + '&blokc=' + app.element('#blokc').value + '&blokd=' + app.element('#blokd').value + '&bloke=' + app.element('#bloke').value + '&blokf=' + app.element('#blokf').value + '&blokg=' + app.element('#blokg').value + '&blokh=' + app.element('#blokh').value + '&bloki=' + app.element('#bloki').value + '&blokj=' + app.element('#blokj').value + '&tanggal=' + app.getDatetime('-') + '&username=' + storage.get('username') + '&author=' + storage.get('nama'));
     app.redirect('/home');
 }
 
@@ -122,7 +121,7 @@ function openCamera() {
             facingMode: 'environment'
         }
     }, function(stream) {
-        let cameraPreview = document.getElementById("cameraPreview");
+        let cameraPreview = app.element("#cameraPreview");
         cameraPreview.srcObject = stream;
     }, function() {
         app.redirect('/izin-kamera');
@@ -141,9 +140,9 @@ function openCamera() {
 }
 
 function onScanSuccess(decodedText, decodedResult) {
-    document.getElementById('reader').style.display = 'none';
-    document.getElementById('bg-result').style.display = 'block';
-    document.getElementById('blok').value = `${decodedText}`;
+    app.element('#reader').style.display = 'none';
+    app.element('#bg-result').style.display = 'block';
+    app.element('#blok').value = `${decodedText}`;
     var html5QrCode = new Html5Qrcode("reader");
     html5QrCode.stop();
     html5QrCode.clear();
@@ -190,10 +189,10 @@ function getLaporanapel() {
 }
 
 function checkapel() {
-    if (document.getElementById('bloka').value == "" || document.getElementById('blokb').value == "" || document.getElementById('blokc').value == "" || document.getElementById('blokd').value == "" || document.getElementById('bloke').value == "" || document.getElementById('blokf').value == "" || document.getElementById('blokg').value == "" || document.getElementById('blokh').value == "" || document.getElementById('bloki').value == "" || document.getElementById('blokj').value == "") {
-        document.getElementById('submitapel').disabled = true;
+    if (app.element('#bloka').value == "" || app.element('#blokb').value == "" || app.element('#blokc').value == "" || app.element('#blokd').value == "" || app.element('#bloke').value == "" || app.element('#blokf').value == "" || app.element('#blokg').value == "" || app.element('#blokh').value == "" || app.element('#bloki').value == "" || app.element('#blokj').value == "") {
+        app.element('#submitapel').disabled = true;
     } else {
-        document.getElementById('submitapel').disabled = false;
+        app.element('#submitapel').disabled = false;
     }
 }
 
@@ -219,7 +218,7 @@ let mediaChunks = null;
 let processingPreviewIntervalId = null;
 
 function processFrame() {
-    let cameraPreview = document.getElementById("cameraPreview");
+    let cameraPreview = app.element("#cameraPreview");
 
     processingPreview
         .getContext('2d')
@@ -233,12 +232,12 @@ function generateRecordingPreview() {
         type: "video/webm"
     });
     let mediaBlobUrl = URL.createObjectURL(mediaBlob);
-    fetch(API_URL + '/upload/' + document.getElementById('blok').value + '/' + storage.get('username') + '/' + document.getElementById('tanggal').value, {
+    fetch(API_URL + '/upload/' + app.element('#blok').value + '/' + storage.get('username') + '/' + app.element('#tanggal').value, {
             method: "POST",
             body: mediaBlob
         })
         .then(response => console.log(response.text()));
-    let recordingPreview = document.getElementById("recordingPreview");
+    let recordingPreview = app.element("#recordingPreview");
     recordingPreview.src = mediaBlobUrl;
 }
 
@@ -252,12 +251,12 @@ function startCapture() {
     navigator.mediaDevices.getUserMedia(constraints)
         .then((stream) => {
             cameraStream = stream;
-            document.getElementById('stopvideo').style.display = "block";
-            document.getElementById('startvideo').style.display = "none";
-            document.getElementById('processvideo').style.display = "block";
-            document.getElementById('previewvideo').style.display = "none";
-            document.getElementById('cameraprev').style.display = "none";
-            let processingPreview = document.getElementById("processingPreview");
+            app.element('#stopvideo').style.display = "block";
+            app.element('#startvideo').style.display = "none";
+            app.element('#processvideo').style.display = "block";
+            app.element('#previewvideo').style.display = "none";
+            app.element('#cameraprev').style.display = "none";
+            let processingPreview = app.element("#processingPreview");
             processingStream = processingPreview.captureStream(FPS);
 
             mediaRecorder = new MediaRecorder(processingStream);
@@ -272,7 +271,7 @@ function startCapture() {
 
             mediaRecorder.start();
 
-            let cameraPreview = document.getElementById("cameraPreview");
+            let cameraPreview = app.element("#cameraPreview");
             cameraPreview.srcObject = stream;
             processingPreviewIntervalId = setInterval(processFrame, 1000 / FPS);
         })
@@ -282,11 +281,11 @@ function startCapture() {
 };
 
 function stopCapture() {
-    document.getElementById('stopvideo').style.display = "none";
-    document.getElementById('startvideo').style.display = "none";
-    document.getElementById('processvideo').style.display = "none";
-    document.getElementById('previewvideo').style.display = "block";
-    document.getElementById("submitlaporan").disabled = false;
+    app.element('#stopvideo').style.display = "none";
+    app.element('#startvideo').style.display = "none";
+    app.element('#processvideo').style.display = "none";
+    app.element('#previewvideo').style.display = "block";
+    app.element("#submitlaporan").disabled = false;
     if (cameraStream != null) {
         cameraStream.getTracks().forEach(function(track) {
             track.stop();

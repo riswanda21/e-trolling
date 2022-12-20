@@ -6,7 +6,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.etrolling.app"
+        applicationId "com.sitiling.app"
         minSdk 21
         targetSdk 33
         versionCode 1

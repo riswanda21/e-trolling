@@ -1,4 +1,4 @@
-package com.etrolling.app;
+package com.sitiling.app;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
