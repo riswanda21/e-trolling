@@ -1,28 +1,28 @@
 <m-body>
-  <div class="top-0 rounded-b-1xl h-9 bg-white p-3 pt-11 pb-10">
-    <div class="mb-4 flex items-center justify-between">
+  <content class="top-0 rounded-b-1xl h-9 bg-white p-3 pt-11 pb-10">
+    <content class="mb-4 flex items-center justify-between">
       <h2 class="font-medium ml-3 text-lg" return='nama.replace(/%20/g, " ")'></h2>
       <h2 class="font-medium ml-3 text-lg"></h2>
       <h2 class="font-medium ml-3 text-lg p-2">
         <a href="{{route}}/profile"><i class="text-slate-800 far fa-user fa-lg"></i></a>
       </h2>
-    </div>
-    <div class="space-y-2 text-center"></div>
-  </div>
-  <div class="px-4">
+    </content>
+    <content class="space-y-2 text-center"></content>
+  </content>
+  <content class="px-4">
     <img src="{{imgPath}}/header2.png" class="relative w-full h-44 bg-cover bg-center group rounded-lg overflow-hidden mt-4 shadow-lg transition duration-300 ease-in-out">
     <forEach="menu in menu_home">
-      <div class="bg-white p-3 rounded-xl shadow-xl flex items-center justify-between mt-4">
-        <div class="flex space-x-6 items-center">
+      <content class="bg-white p-3 rounded-xl shadow-xl flex items-center justify-between mt-4">
+        <content class="flex space-x-6 items-center">
           <img :src="'{{imgPath}}/' + menu.icon" class="w-auto w-16 h-16 rounded-lg">
           <a :href="'{{route}}' + menu.link">
-            <div>
+            <content>
               <h3 class="font-semibold text-base" return="menu.name"></h3>
               <p class="font-normal text-sm text-gray-400" return="menu.desc"></p>
-            </div>
+            </content>
           </a>
-        </div>
-      </div>
+        </content>
+      </content>
     </forEach>
-  </div>
+  </content>
 </m-body>

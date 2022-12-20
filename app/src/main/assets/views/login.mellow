@@ -1,13 +1,13 @@
-<div class="min-h-screen bg-gray-100 flex flex-col justify-center sm:py-12">
-  <div class="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
+<content class="min-h-screen bg-gray-100 flex flex-col justify-center sm:py-12">
+  <content class="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
     <center class="animate__animated animate__fadeInDown">
       <img style="margin-right:90px;" src="{{imgPath}}/logo_pengayoman.png" width="60px" height="80px">
       <img style="margin-left:70px;margin-top:-70px;" src="{{imgPath}}/logo_pemasyarakatan.png" width="80px" height="100px">
     </center>
     <h1 style="margin-top:10px;font-size:17px;" class="animate__animated animate__fadeInDown text-center font-semibold text-slate-800">Lapas Kelas IIB Banjarbaru</h1>
     <br>
-    <div class="bg-white shadow w-full rounded-lg divide-y divide-gray-200">
-      <div class="px-5 py-7">
+    <content class="bg-white shadow w-full rounded-lg contentide-y contentide-gray-200">
+      <content class="px-5 py-7">
         <alert content="template([
         {
           id: 'incorrect',
@@ -29,8 +29,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+      </content>
+    </content>
+  </content>
+</content>
+</content>

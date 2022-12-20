@@ -8,10 +8,10 @@
       }
     ])">
     </m-header>
-    <div>
+    <content>
           <section class="p-5">
-            <div class="w-full">
-                <div class="shadow overflow-hidden rounded border-b border-gray-200">
+            <content class="w-full">
+                <content class="shadow overflow-hidden rounded border-b border-gray-200">
                   <table class="min-w-full bg-white">
                     <thead class="bg-slate-200 text-black rounded-lg">
                       <tr>
@@ -32,7 +32,7 @@
                     </forEach>
                   </tbody>
                   </table>
-                </div>
-              </div>
+                </content>
+              </content>
           </section>
   </m-body>

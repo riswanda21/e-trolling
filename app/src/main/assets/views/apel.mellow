@@ -7,8 +7,8 @@
         backButton: 'true'
       }])">
     </m-header>
-    <div id="bg-result" class="relative p-5 mt-2">
-      <div>
+    <content id="bg-result" class="relative p-5 mt-2">
+      <content>
         <textbox content="template([
         {
           id: 'bloka',
@@ -17,9 +17,9 @@
           placeholder: 'Total narapidana di Blok A',
           function: 'onchange=checkapel()'
         }])"></textbox>
-      </div>
+      </content>
       <br>
-      <div>
+      <content>
         <textbox content="template([
         {
           id: 'blokb',
@@ -28,9 +28,9 @@
           placeholder: 'Total narapidana di Blok B',
           function: 'onchange=checkapel()'
         }])"></textbox>
-      </div>
+      </content>
       <br>
-      <div>
+      <content>
         <textbox content="template([
         {
           id: 'blokc',
@@ -39,9 +39,9 @@
           placeholder: 'Total narapidana di Blok C',
           function: 'onchange=checkapel()'
         }])"></textbox>
-      </div>
+      </content>
       <br>
-      <div>
+      <content>
         <textbox content="template([
         {
           id: 'blokd',
@@ -50,9 +50,9 @@
           placeholder: 'Total narapidana di Blok D',
           function: 'onchange=checkapel()'
         }])"></textbox>
-      </div>
+      </content>
       <br>
-      <div>
+      <content>
         <textbox content="template([
         {
           id: 'bloke',
@@ -61,9 +61,9 @@
           placeholder: 'Total narapidana di Blok E',
           function: 'onchange=checkapel()'
         }])"></textbox>
-      </div>
+      </content>
       <br>
-      <div>
+      <content>
         <textbox content="template([
         {
           id: 'blokf',
@@ -72,9 +72,9 @@
           placeholder: 'Total narapidana di Blok F',
           function: 'onchange=checkapel()'
         }])"></textbox>
-      </div>
+      </content>
       <br>
-      <div>
+      <content>
         <textbox content="template([
         {
           id: 'blokg',
@@ -83,9 +83,9 @@
           placeholder: 'Total narapidana di Blok G',
           function: 'onchange=checkapel()'
         }])"></textbox>
-      </div>
+      </content>
       <br>
-      <div>
+      <content>
         <textbox content="template([
         {
           id: 'blokh',
@@ -94,9 +94,9 @@
           placeholder: 'Total narapidana di Blok H',
           function: 'onchange=checkapel()'
         }])"></textbox>
-      </div>
+      </content>
       <br>
-      <div>
+      <content>
         <textbox content="template([
         {
           id: 'bloki',
@@ -105,9 +105,9 @@
           placeholder: 'Total narapidana di Blok I',
           function: 'onchange=checkapel()'
         }])"></textbox>
-      </div>
+      </content>
       <br>
-      <div>
+      <content>
         <textbox content="template([
         {
           id: 'blokj',
@@ -116,8 +116,8 @@
           placeholder: 'Total narapidana di Blok J',
           function: 'onchange=checkapel()'
         }])"></textbox>
-      </div>
+      </content>
       <br>
       <button id="submitapel" onclick="laporapel()" class="w-full mt-4 bg-blue-600 hover:bg-blue-700 shadow-xl text-white font-bold py-2 px-4 rounded disabled:bg-blue-400" disabled="true"> Buat Laporan </button>
-    </div>
+    </content>
   </m-body>

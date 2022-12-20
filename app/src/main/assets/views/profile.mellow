@@ -8,20 +8,20 @@
       }
     ])">
     </m-header>
-    <div class="p-5">
-    <div class="bg-white rounded-xl p-4 shadow-xl">
-        <div class="flex flex-col justify-center items-center">
-            <div class="w-32 h-32 rounded-full bg-gray-300 border-2 border-white mt-2">
+    <content class="p-5">
+    <content class="bg-white rounded-xl p-4 shadow-xl">
+        <content class="flex flex-col justify-center items-center">
+            <content class="w-32 h-32 rounded-full bg-gray-300 border-2 border-white mt-2">
                 <img 
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVxhAxJ4D7MOeTTj6kR9PBeZonW5HM7giKjTbEmR-HMBwf3G1VqGnlwpO1kWrdyIZu8_U&usqp=CAU" 
                 class="rounded-full w-auto"
                 />
-            </div>
+            </content>
             <p class="font-semibold text-xl mt-1" return="nama"></p>
             <p class="font-semibold text-base text-gray-400" return="jabatan"></p>
-        </div>
+        </content>
         <button onclick="app.redirect('/laporan')" class="w-full mt-4 bg-slate-500 hover:bg-slate-700 shadow-xl text-white font-bold py-2 px-4 rounded"> Laporan Anda </button>
         <button onclick="logout()" class="w-full mt-4 bg-blue-500 hover:bg-blue-700 shadow-xl text-white font-bold py-2 px-4 rounded"> Keluar </button>
-    </div>
-</div>
+    </content>
+</content>
   </m-body>

@@ -70,6 +70,8 @@ function render(id, file, title = [{}]) {
                     .replaceAll('</m-header>', '</div>')
                     .replaceAll('<textbox', '<div x-html="input"')
                     .replaceAll('</textbox>', '</div>')
+                    .replaceAll('<content', '<div')
+                    .replaceAll('</content>', '</div>')
                     .replaceAll('<alert', '<div x-html="alert"')
                     .replaceAll('</alert>', '</div>')
                     .replaceAll('return=', 'x-text=')
