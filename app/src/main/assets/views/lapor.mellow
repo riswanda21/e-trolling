@@ -9,7 +9,7 @@
   ])">
   </m-header>
   <div id="reader" style="width:100%;"></div>
-  <div id="bg-result" style="display:block;" class="relative p-5 mt-2">
+  <div id="bg-result" style="display:none;" class="relative p-5 mt-2">
     <div>
       <textbox content="template([
         {
