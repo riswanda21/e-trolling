@@ -69,7 +69,7 @@ function render(id, file, title = [{}]) {
                     .replaceAll('<m-header', '<div x-html="header"')
                     .replaceAll('</m-header>', '</div>')
                     .replaceAll('<textbox', '<div x-html="input"')
-                    .replaceAll('</text>', '</div>')
+                    .replaceAll('</textbox>', '</div>')
                     .replaceAll('<alert', '<div x-html="alert"')
                     .replaceAll('</alert>', '</div>')
                     .replaceAll('return=', 'x-text=')
@@ -177,8 +177,13 @@ class App {
         } else {
             var functs = data[0].function;
         }
+        if(data[0].return == null) {
+            var rets = "";
+        } else {
+            var rets = 'x-model="' + data[0].return + '"';
+        }
         return '<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">' + data[0].labelText + '</label>' +
-        '<input type="' + data[0].type + '" id="' + data[0].id + '" ' + functs + '  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="' + data[0].placeholder + '">';
+        '<input type="' + data[0].type + '" id="' + data[0].id + '" ' + rets + ' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="' + data[0].placeholder + '" ' + functs + '>';
     }
 
 }

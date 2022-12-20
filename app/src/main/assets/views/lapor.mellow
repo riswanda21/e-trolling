@@ -9,20 +9,33 @@
   ])">
   </m-header>
   <div id="reader" style="width:100%;"></div>
-  <div id="bg-result" style="display:none;" class="relative p-5 mt-2">
+  <div id="bg-result" style="display:block;" class="relative p-5 mt-2">
     <div>
-      <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok</label>
-      <input type="text" id="blok" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Blok" readonly>
+      <textbox content="template([
+        {
+          id: 'blok',
+          labelText: 'Blok',
+          type: 'text',
+          placeholder: 'Blok',
+          function: 'readonly'
+        }])"></textbox>
     </div>
     <div style="display:none;">
-      <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Waktu / Tanggal</label>
-      <input type="text" id="tanggal" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" x-model="currentDate" placeholder="Waktu" readonly>
+      <textbox content="template([
+      {
+        id: 'tanggal',
+        labelText: 'Waktu / Tanggal',
+        type: 'text',
+        placeholder: 'Waktu / Tanggal',
+        function: 'readonly'
+      }])">
+    </textbox>
     </div>
     <br>
-    <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Keterangan</label>
+    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Keterangan</label>
     <textarea id="keterangan" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Keterangan..."></textarea>
     <br>
-    <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Video</label>
+    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Video</label>
     <div class="bg-white rounded-xl p-4 shadow-xl mt-4">
       <div class="flex flex-col justify-center items-center">
         <div id="cameraprev">

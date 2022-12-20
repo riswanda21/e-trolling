@@ -33,9 +33,10 @@ const Mellow = function() {
     var app = new App();
     var storage = new Storage();
 
-    app.setTitle('E-Trolling');
+    app.setTitle('SITILING');
     if (app.route == '/lapor') {
         openCamera();
+        app.element('#tanggal').value = app.getDatetime('-');
     }
     return {
         nama: storage.get('nama'),
