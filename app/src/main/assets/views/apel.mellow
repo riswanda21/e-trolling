@@ -1,62 +1,121 @@
 <m-body>
-    <nav-mobile json="template([
+    <m-header content="template([
       {
         text: 'Apel Hunian',
         backgroundColor: 'slate-50',
         textColor: 'slate-800',
         backButton: 'true'
-      }
-    ])">
-    </nav-mobile>
+      }])">
+    </m-header>
     <div id="bg-result" class="relative p-5 mt-2">
       <div>
-        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok A</label>
-        <input type="number" id="bloka" onchange="checkapel()"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok A">
+        <textbox content="template([
+        {
+          id: 'bloka',
+          labelText: 'Blok A',
+          type: 'number',
+          placeholder: 'Total narapidana di Blok A',
+          function: 'onchange=checkapel()'
+        }])"></textbox>
       </div>
       <br>
       <div>
-        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok B</label>
-        <input type="number" id="blokb" onchange="checkapel()"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok B">
+        <textbox content="template([
+        {
+          id: 'blokb',
+          labelText: 'Blok B',
+          type: 'number',
+          placeholder: 'Total narapidana di Blok B',
+          function: 'onchange=checkapel()'
+        }])"></textbox>
       </div>
       <br>
       <div>
-        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok C</label>
-        <input type="number" id="blokc" onchange="checkapel()"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok C">
+        <textbox content="template([
+        {
+          id: 'blokc',
+          labelText: 'Blok C',
+          type: 'number',
+          placeholder: 'Total narapidana di Blok C',
+          function: 'onchange=checkapel()'
+        }])"></textbox>
       </div>
       <br>
       <div>
-        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok D</label>
-        <input type="number" id="blokd" onchange="checkapel()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok D">
+        <textbox content="template([
+        {
+          id: 'blokd',
+          labelText: 'Blok D',
+          type: 'number',
+          placeholder: 'Total narapidana di Blok D',
+          function: 'onchange=checkapel()'
+        }])"></textbox>
       </div>
       <br>
       <div>
-        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok E</label>
-        <input type="number" id="bloke" onchange="checkapel()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok E">
+        <textbox content="template([
+        {
+          id: 'bloke',
+          labelText: 'Blok E',
+          type: 'number',
+          placeholder: 'Total narapidana di Blok E',
+          function: 'onchange=checkapel()'
+        }])"></textbox>
       </div>
       <br>
       <div>
-        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok F</label>
-        <input type="number" id="blokf" onchange="checkapel()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok F">
+        <textbox content="template([
+        {
+          id: 'blokf',
+          labelText: 'Blok F',
+          type: 'number',
+          placeholder: 'Total narapidana di Blok F',
+          function: 'onchange=checkapel()'
+        }])"></textbox>
       </div>
       <br>
       <div>
-        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok G</label>
-        <input type="number" id="blokg" onchange="checkapel()"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok G">
+        <textbox content="template([
+        {
+          id: 'blokg',
+          labelText: 'Blok G',
+          type: 'number',
+          placeholder: 'Total narapidana di Blok G',
+          function: 'onchange=checkapel()'
+        }])"></textbox>
       </div>
       <br>
       <div>
-        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok H</label>
-        <input type="number" id="blokh" onchange="checkapel()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok H">
+        <textbox content="template([
+        {
+          id: 'blokh',
+          labelText: 'Blok H',
+          type: 'number',
+          placeholder: 'Total narapidana di Blok H',
+          function: 'onchange=checkapel()'
+        }])"></textbox>
       </div>
       <br>
       <div>
-        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok I</label>
-        <input type="number" id="bloki" onchange="checkapel()"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok I">
+        <textbox content="template([
+        {
+          id: 'bloki',
+          labelText: 'Blok I',
+          type: 'number',
+          placeholder: 'Total narapidana di Blok I',
+          function: 'onchange=checkapel()'
+        }])"></textbox>
       </div>
       <br>
       <div>
-        <label for="website-admin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blok J</label>
-        <input type="number" id="blokj" onchange="checkapel()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Total narapidana di Blok J">
+        <textbox content="template([
+        {
+          id: 'blokj',
+          labelText: 'Blok J',
+          type: 'number',
+          placeholder: 'Total narapidana di Blok J',
+          function: 'onchange=checkapel()'
+        }])"></textbox>
       </div>
       <br>
       <button id="submitapel" onclick="laporapel()" class="w-full mt-4 bg-blue-600 hover:bg-blue-700 shadow-xl text-white font-bold py-2 px-4 rounded disabled:bg-blue-400" disabled="true"> Buat Laporan </button>

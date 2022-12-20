@@ -1,5 +1,5 @@
 <m-body>
-    <nav-mobile json="template([
+    <m-header content="template([
       {
         text: 'Laporan Anda',
         backgroundColor: 'slate-50',
@@ -7,8 +7,8 @@
         backButton: 'true'
       }
     ])">
-    </nav-mobile>
-    <div json="getLaporan()" function="fetchLaporan()">
+    </m-header>
+    <div content="getLaporan()" function="fetchLaporan()">
           <section class="p-5">
             <div class="space-y-2">
               <forEach="laporan in dataLaporan.list_laporan" :key="laporan._id">

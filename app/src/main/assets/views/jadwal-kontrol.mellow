@@ -1,5 +1,5 @@
 <m-body>
-    <nav-mobile json="template([
+    <m-header content="template([
       {
         text: 'Jadwal Kontrol',
         backgroundColor: 'slate-50',
@@ -7,7 +7,7 @@
         backButton: 'true'
       }
     ])">
-    </nav-mobile>
+    </m-header>
     <div>
           <section class="p-5">
             <div class="w-full">
@@ -21,7 +21,7 @@
                         <th class="text-left py-3 px-4 uppercase font-semibold text-sm">MALAM</td>
                       </tr>
                     </thead>
-                  <tbody json="getJadwal()" function="fetchJadwal()" class="text-gray-700">
+                  <tbody content="getJadwal()" function="fetchJadwal()" class="text-gray-700">
                     <forEach="jadwal in dataJadwal.jadwal" :key="jadwal._id">
                       <tr>
                         <td class="text-left py-3 px-4" return="jadwal.blok"></td>

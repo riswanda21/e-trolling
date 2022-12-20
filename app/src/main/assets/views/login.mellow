@@ -8,7 +8,7 @@
     <br>
     <div class="bg-white shadow w-full rounded-lg divide-y divide-gray-200">
       <div class="px-5 py-7">
-        <alert json="template([
+        <alert content="template([
         {
           id: 'incorrect',
           text: 'Username atau password salah.',

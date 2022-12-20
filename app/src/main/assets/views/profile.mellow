@@ -1,5 +1,5 @@
 <m-body>
-    <nav-mobile json="template([
+    <m-header content="template([
       {
         text: 'Profil',
         backgroundColor: 'slate-50',
@@ -7,7 +7,7 @@
         backButton: 'true'
       }
     ])">
-    </nav-mobile>
+    </m-header>
     <div class="p-5">
     <div class="bg-white rounded-xl p-4 shadow-xl">
         <div class="flex flex-col justify-center items-center">

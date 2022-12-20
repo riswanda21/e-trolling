@@ -1,5 +1,5 @@
 <m-body>
-    <nav-mobile json="template([
+    <m-header content="template([
       {
         text: 'Permintaan Akses',
         backgroundColor: 'slate-50',
@@ -7,7 +7,7 @@
         backButton: 'true'
       }
     ])">
-    </nav-mobile>
+    </m-header>
     <div>
           <section class="p-5">
             <h3>Harap izinkan akses kamera anda.</h3><br>

@@ -1,5 +1,5 @@
 <m-body>
-  <nav-mobile json="template([
+  <m-header content="template([
     {
       text: 'Kontrol Keliling',
       backgroundColor: 'slate-50',
@@ -7,7 +7,7 @@
       backButton: 'true'
     }
   ])">
-  </nav-mobile>
+  </m-header>
   <div id="reader" style="width:100%;"></div>
   <div id="bg-result" style="display:none;" class="relative p-5 mt-2">
     <div>

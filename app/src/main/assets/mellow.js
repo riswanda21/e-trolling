@@ -27,7 +27,8 @@ function template(data) {
     let apps = new App();
     return {
         header: apps.setHeader(data),
-        alert: apps.setAlert(data)
+        alert: apps.setAlert(data),
+        input: apps.setInput(data)
     };
 }
 
@@ -65,12 +66,15 @@ function render(id, file, title = [{}]) {
                     .replaceAll('{{route}}', MellowSet[0].route)
                     .replaceAll('<m-body>', m_body)
                     .replaceAll('</m-body>', '</div></div>')
-                    .replaceAll('<nav-mobile', '<div x-html="header"')
-                    .replaceAll('</nav-mobile>', '</div>')
+                    .replaceAll('<m-header', '<div x-html="header"')
+                    .replaceAll('</m-header>', '</div>')
+                    .replaceAll('<textbox', '<div x-html="input"')
+                    .replaceAll('</text>', '</div>')
                     .replaceAll('<alert', '<div x-html="alert"')
                     .replaceAll('</alert>', '</div>')
                     .replaceAll('return=', 'x-text=')
                     .replaceAll('json=', 'x-data=')
+                    .replaceAll('content=', 'x-data=')
                     .replaceAll('function=', 'x-init=')
                     .replaceAll('<text>', '<p class="text-sm text-slate-400"><span x-text="')
                     .replaceAll('</text>', '"></span></p>')
@@ -165,6 +169,16 @@ class App {
     setAlert(data) {
         return '<div id="' + data[0].id + '" style="display:' + data[0].display + ';" class="bg-' + data[0].backgroundColor + ' border border-' + data[0].borderColor + ' text-' + data[0].textColor + ' px-4 py-3 rounded relative ' + data[0].class + '" role="alert">' +
             '<span class="block sm:inline">' + data[0].text + '</span></div>';
+    }
+
+    setInput(data) {
+        if(data[0].function == null) {
+            var functs = "";
+        } else {
+            var functs = data[0].function;
+        }
+        return '<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">' + data[0].labelText + '</label>' +
+        '<input type="' + data[0].type + '" id="' + data[0].id + '" ' + functs + '  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="' + data[0].placeholder + '">';
     }
 
 }
