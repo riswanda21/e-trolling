@@ -1,5 +1,5 @@
-<m-body>
-    <m-header content="template([
+<View>
+    <AppBar content="template([
       {
         text: 'Profil',
         backgroundColor: 'slate-50',
@@ -7,7 +7,7 @@
         backButton: 'true'
       }
     ])">
-    </m-header>
+    </AppBar>
     <content class="p-5">
     <content class="bg-white rounded-xl p-4 shadow-xl">
         <content class="flex flex-col justify-center items-center">
@@ -24,4 +24,4 @@
         <button onclick="logout()" class="w-full mt-4 bg-blue-500 hover:bg-blue-700 shadow-xl text-white font-bold py-2 px-4 rounded"> Keluar </button>
     </content>
 </content>
-  </m-body>
+  </View>

@@ -1,5 +1,5 @@
-<m-body>
-    <m-header content="template([
+<View>
+    <AppBar content="template([
       {
         text: 'Jadwal Kontrol',
         backgroundColor: 'slate-50',
@@ -7,7 +7,7 @@
         backButton: 'true'
       }
     ])">
-    </m-header>
+    </AppBar>
     <content>
           <section class="p-5">
             <content class="w-full">
@@ -35,4 +35,4 @@
                 </content>
               </content>
           </section>
-  </m-body>
+  </View>

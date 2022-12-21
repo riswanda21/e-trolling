@@ -64,12 +64,12 @@ function render(id, file, title = [{}]) {
                 var data = this.responseText;
                 document.getElementById(id).innerHTML = data.replaceAll('{{imgPath}}', MellowSet[0].imgPath)
                     .replaceAll('{{route}}', MellowSet[0].route)
-                    .replaceAll('<m-body>', m_body)
-                    .replaceAll('</m-body>', '</div></div>')
-                    .replaceAll('<m-header', '<div x-html="header"')
-                    .replaceAll('</m-header>', '</div>')
-                    .replaceAll('<textbox', '<div x-html="input"')
-                    .replaceAll('</textbox>', '</div>')
+                    .replaceAll('<View>', m_body)
+                    .replaceAll('</View>', '</div></div>')
+                    .replaceAll('<AppBar', '<div x-html="header"')
+                    .replaceAll('</AppBar>', '</div>')
+                    .replaceAll('<TextBox', '<div x-html="input"')
+                    .replaceAll('</TextBox>', '</div>')
                     .replaceAll('<content', '<div')
                     .replaceAll('</content>', '</div>')
                     .replaceAll('<alert', '<div x-html="alert"')
@@ -84,7 +84,7 @@ function render(id, file, title = [{}]) {
                     .replaceAll('</forEach>', '</template>')
                     .replaceAll('<if="', '<template x-if="')
                     .replaceAll('</if>', '</template>')
-                    .replaceAll('<loading-circle></loading-circle>', '<center><div class="loader_mini"></div></center>');
+                    .replaceAll('<LoadingCircle></LoadingCircle>', '<center><div class="loader_mini"></div></center>');
             };
             apps.send();
         } else if (files.slice(".") == 'html') {

@@ -1,123 +1,123 @@
-<m-body>
-    <m-header content="template([
+<View>
+    <AppBar content="template([
       {
         text: 'Apel Hunian',
         backgroundColor: 'slate-50',
         textColor: 'slate-800',
         backButton: 'true'
       }])">
-    </m-header>
+    </AppBar>
     <content id="bg-result" class="relative p-5 mt-2">
       <content>
-        <textbox content="template([
+        <TextBox content="template([
         {
           id: 'bloka',
           labelText: 'Blok A',
           type: 'number',
           placeholder: 'Total narapidana di Blok A',
           function: 'onchange=checkapel()'
-        }])"></textbox>
+        }])"></TextBox>
       </content>
       <br>
       <content>
-        <textbox content="template([
+        <TextBox content="template([
         {
           id: 'blokb',
           labelText: 'Blok B',
           type: 'number',
           placeholder: 'Total narapidana di Blok B',
           function: 'onchange=checkapel()'
-        }])"></textbox>
+        }])"></TextBox>
       </content>
       <br>
       <content>
-        <textbox content="template([
+        <TextBox content="template([
         {
           id: 'blokc',
           labelText: 'Blok C',
           type: 'number',
           placeholder: 'Total narapidana di Blok C',
           function: 'onchange=checkapel()'
-        }])"></textbox>
+        }])"></TextBox>
       </content>
       <br>
       <content>
-        <textbox content="template([
+        <TextBox content="template([
         {
           id: 'blokd',
           labelText: 'Blok D',
           type: 'number',
           placeholder: 'Total narapidana di Blok D',
           function: 'onchange=checkapel()'
-        }])"></textbox>
+        }])"></TextBox>
       </content>
       <br>
       <content>
-        <textbox content="template([
+        <TextBox content="template([
         {
           id: 'bloke',
           labelText: 'Blok E',
           type: 'number',
           placeholder: 'Total narapidana di Blok E',
           function: 'onchange=checkapel()'
-        }])"></textbox>
+        }])"></TextBox>
       </content>
       <br>
       <content>
-        <textbox content="template([
+        <TextBox content="template([
         {
           id: 'blokf',
           labelText: 'Blok F',
           type: 'number',
           placeholder: 'Total narapidana di Blok F',
           function: 'onchange=checkapel()'
-        }])"></textbox>
+        }])"></TextBox>
       </content>
       <br>
       <content>
-        <textbox content="template([
+        <TextBox content="template([
         {
           id: 'blokg',
           labelText: 'Blok G',
           type: 'number',
           placeholder: 'Total narapidana di Blok G',
           function: 'onchange=checkapel()'
-        }])"></textbox>
+        }])"></TextBox>
       </content>
       <br>
       <content>
-        <textbox content="template([
+        <TextBox content="template([
         {
           id: 'blokh',
           labelText: 'Blok H',
           type: 'number',
           placeholder: 'Total narapidana di Blok H',
           function: 'onchange=checkapel()'
-        }])"></textbox>
+        }])"></TextBox>
       </content>
       <br>
       <content>
-        <textbox content="template([
+        <TextBox content="template([
         {
           id: 'bloki',
           labelText: 'Blok I',
           type: 'number',
           placeholder: 'Total narapidana di Blok I',
           function: 'onchange=checkapel()'
-        }])"></textbox>
+        }])"></TextBox>
       </content>
       <br>
       <content>
-        <textbox content="template([
+        <TextBox content="template([
         {
           id: 'blokj',
           labelText: 'Blok J',
           type: 'number',
           placeholder: 'Total narapidana di Blok J',
           function: 'onchange=checkapel()'
-        }])"></textbox>
+        }])"></TextBox>
       </content>
       <br>
       <button id="submitapel" onclick="laporapel()" class="w-full mt-4 bg-blue-600 hover:bg-blue-700 shadow-xl text-white font-bold py-2 px-4 rounded disabled:bg-blue-400" disabled="true"> Buat Laporan </button>
     </content>
-  </m-body>
+  </View>

@@ -1,5 +1,5 @@
-<m-body>
-    <m-header content="template([
+<View>
+    <AppBar content="template([
       {
         text: 'Laporan Kontrol',
         backgroundColor: 'slate-50',
@@ -7,7 +7,7 @@
         backButton: 'true'
       }
     ])">
-    </m-header>
+    </AppBar>
     <content content="getLaporanKPLP()" function="fetchLaporanKPLP()">
           <section class="p-5">
             <content class="space-y-2">
@@ -25,4 +25,4 @@
               </forEach>
               </content>
           </section>
-  </m-body>
+  </View>

@@ -1,4 +1,4 @@
-<m-body>
+<View>
     <content class="top-0 rounded-b-1xl h-9 bg-white p-3 pt-11 pb-10">
       <content class="mb-4 flex items-center justify-between">
         <h2 class="font-medium ml-3 text-lg" return='nama.replace(/%20/g, " ")'></h2>
@@ -25,4 +25,4 @@
         </content>
       </forEach>
     </content>
-  </m-body>
+  </View>

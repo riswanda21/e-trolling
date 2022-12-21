@@ -1,5 +1,5 @@
-<m-body>
-  <m-header content="template([
+<View>
+  <AppBar content="template([
     {
       text: 'Kontrol Keliling',
       backgroundColor: 'slate-50',
@@ -7,21 +7,21 @@
       backButton: 'true'
     }
   ])">
-  </m-header>
+  </AppBar>
   <content id="reader" style="width:100%;"></content>
   <content id="bg-result" style="display:none;" class="relative p-5 mt-2">
     <content>
-      <textbox content="template([
+      <TextBox content="template([
         {
           id: 'blok',
           labelText: 'Blok',
           type: 'text',
           placeholder: 'Blok',
           function: 'readonly'
-        }])"></textbox>
+        }])"></TextBox>
     </content>
     <content style="display:none;">
-      <textbox content="template([
+      <TextBox content="template([
       {
         id: 'tanggal',
         labelText: 'Waktu / Tanggal',
@@ -29,7 +29,7 @@
         placeholder: 'Waktu / Tanggal',
         function: 'readonly'
       }])">
-    </textbox>
+    </TextBox>
     </content>
     <br>
     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Keterangan</label>
@@ -59,4 +59,4 @@
     </content>
     <button id="submitlaporan" onclick="buatLaporan()" class="w-full mt-4 bg-blue-600 hover:bg-blue-700 shadow-xl text-white font-bold py-2 px-4 rounded disabled:bg-blue-400" disabled="true"> Buat Laporan </button>
   </content>
-</m-body>
+</View>
