@@ -11,7 +11,7 @@
     <content>
       <section class="p-5">
         <h3>Harap izinkan akses kamera anda.</h3><br>
-        <img src="{{imgPath}}/izin-akses.jpg">
+        <Image src="./{{imgPath}}/izin-akses.jpg">
       </section>
     </content>
   </View>

@@ -62,6 +62,10 @@ function render(id, file, title = [{}]) {
                 if (this.readyState !== 4) return;
                 if (this.status !== 200) return;
                 var data = this.responseText;
+                let img_src1 = /<Image src=".\/(.*?)"/gi;
+                let img_src2 = /<Image src="'(.*?)"/gi;
+                data = data.replace(img_src1, `<img src="$1"`)
+                    .replace(img_src2, `<img :src="'$1"`)
                 document.getElementById(id).innerHTML = data.replaceAll('{{imgPath}}', MellowSet[0].imgPath)
                     .replaceAll('{{route}}', MellowSet[0].route)
                     .replaceAll('<View>', m_body)
@@ -70,6 +74,7 @@ function render(id, file, title = [{}]) {
                     .replaceAll('</AppBar>', '</div>')
                     .replaceAll('<TextBox', '<div x-html="input"')
                     .replaceAll('</TextBox>', '</div>')
+                    .replaceAll('<Image', '<img')
                     .replaceAll('<content', '<div')
                     .replaceAll('</content>', '</div>')
                     .replaceAll('<alert', '<div x-html="alert"')

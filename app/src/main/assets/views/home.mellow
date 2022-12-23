@@ -10,11 +10,11 @@
     <content class="space-y-2 text-center"></content>
   </content>
   <content class="px-4">
-    <img src="{{imgPath}}/header2.png" class="relative w-full h-44 bg-cover bg-center group rounded-lg overflow-hidden mt-4 shadow-lg transition duration-300 ease-in-out">
+    <Image src="./{{imgPath}}/header2.png" class="relative w-full h-44 bg-cover bg-center group rounded-lg overflow-hidden mt-4 shadow-lg transition duration-300 ease-in-out">
     <forEach="menu in menu_home">
       <content class="bg-white p-3 rounded-xl shadow-xl flex items-center justify-between mt-4">
         <content class="flex space-x-6 items-center">
-          <img :src="'{{imgPath}}/' + menu.icon" class="w-auto w-16 h-16 rounded-lg">
+          <Image src="'{{imgPath}}/' + menu.icon" class="w-auto w-16 h-16 rounded-lg">
           <a :href="'{{route}}' + menu.link">
             <content>
               <h3 class="font-semibold text-base" return="menu.name"></h3>
