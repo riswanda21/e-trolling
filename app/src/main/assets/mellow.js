@@ -205,7 +205,7 @@ class Http {
         apps.onreadystatechange = function() {
             if (this.readyState !== 4) return;
             if (this.status !== 200) return;
-            document.getElementById(id).innerHTML = this.responseText;
+            return this.responseText;
         };
         apps.send();
     }
